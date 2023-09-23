@@ -16,6 +16,7 @@ pyproject-flake8 = "^6.0.0.post1"
 mypy = "^1.5.1"
 black = "^23.9.1"
 isort = "^5.12.0"
+taskipy = "^1.12.0"
 
 [build-system]
 requires = ["poetry-core"]
@@ -47,3 +48,11 @@ import_heading_stdlib      = "Standard Library"
 import_heading_thirdparty  = "Third Party Library"
 import_heading_firstparty  = "First Party Library"
 import_heading_localfolder = "Local Library"
+
+[tool.taskipy.tasks]
+lint = "task lint_flake8 &&task lint_mypy"
+fmt = "task fmt_black &&task fmt_isort"
+lint_flake8 = "pflake8 main.py models modules routers settings tests"
+lint_mypy = "mypy main.py models modules routers settings tests"
+fmt_black = "black main.py models modules routers settings tests"
+fmt_isort = "isort main.py models modules routers settings tests"
