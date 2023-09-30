@@ -2,7 +2,7 @@
 import logging
 
 
-def configure_logging():
+def configure_logging() -> logging.Logger:
     # ロガーを作成する
     logger = logging.getLogger(__name__)
 
