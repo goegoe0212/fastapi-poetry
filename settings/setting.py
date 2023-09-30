@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     version: str = Field(default="1.0.0")
     openapi_url: str = Field(default="/openapi.json")
     docs_url: str = Field(default="/docs")
-    redoc_url: str = Field(default="/redoc")
+    prefix_url: str = Field(default="")
 
     class Config:
         env_file = ".env"

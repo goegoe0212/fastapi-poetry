@@ -11,7 +11,7 @@ app = FastAPI(
     version=settings.version,
     openapi_url=settings.openapi_url,
     docs_url=settings.docs_url,
-    redoc_url=settings.redoc_url,
+    redoc_url=None,
 )
 
-app.include_router(router_hello.app)
+app.include_router(router_hello.app, prefix=settings.prefix_url)
