@@ -2,6 +2,11 @@
 from pydantic import Field, ValidationError
 from pydantic_settings import BaseSettings
 
+# First Party Library
+from modules.logging_config import configure_logging
+
+logger = configure_logging()
+
 
 class Settings(BaseSettings):
     title: str = Field(default="FastAPI")
@@ -19,4 +24,4 @@ class Settings(BaseSettings):
 try:
     settings = Settings()
 except ValidationError as e:
-    print(e)
+    logger.error(e)
