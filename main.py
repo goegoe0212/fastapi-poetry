@@ -3,7 +3,15 @@ from fastapi import FastAPI
 
 # First Party Library
 from routers import router_hello
+from settings.setting import settings
 
-app = FastAPI()
+app = FastAPI(
+    title=settings.title,
+    description=settings.description,
+    version=settings.version,
+    openapi_url=settings.openapi_url,
+    docs_url=settings.docs_url,
+    redoc_url=settings.redoc_url,
+)
 
 app.include_router(router_hello.app)
