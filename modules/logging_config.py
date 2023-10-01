@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 """
 ### 概要:
 
@@ -10,14 +9,11 @@
 
 """
 
-=======
->>>>>>> 2afbdac39218105b771ec970834071971110f80c
 # Standard Library
 import logging
 
 
 def configure_logging() -> logging.Logger:
-<<<<<<< HEAD
     """
     ### 概要:
 
@@ -33,8 +29,6 @@ def configure_logging() -> logging.Logger:
         >>> logger.warning("warning message")
         >>> logger.error("error message")
     """
-=======
->>>>>>> 2afbdac39218105b771ec970834071971110f80c
     # ロガーを作成する
     logger = logging.getLogger(__name__)
 
