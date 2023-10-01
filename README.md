@@ -54,8 +54,8 @@ touch .vscode/settings.json
     "flake8.args": [
         "--max-line-length","120",
         "--max-complexity", "10",
-        "--ignore", "E203, W503",
-        "--exclude", ".venv,.git,__pycache__"
+        "--ignore", "E203, W503, D400",
+        "--exclude", ".venv, .git, __pycache__, .mypy_cache, .pytest_cache"
     ],
     "black-formatter.args": [
         "--config", "pyproject.toml"
