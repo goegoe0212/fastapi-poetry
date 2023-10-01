@@ -21,8 +21,11 @@ isort = "^5.12.0"
 taskipy = "^1.12.0"
 pytest = "^7.4.2"
 httpx = "^0.25.0"
+<<<<<<< HEAD
 flake8-docstrings = "^1.7.0"
 pytest-cov = "^4.1.0"
+=======
+>>>>>>> 2afbdac39218105b771ec970834071971110f80c
 
 [build-system]
 requires = ["poetry-core"]
