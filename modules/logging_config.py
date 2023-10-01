@@ -1,8 +1,34 @@
+"""
+### 概要:
+
+    このモジュールには、アプリケーションのロギング設定が含まれています。
+
+### 属性:
+
+    - logger: ロガーを返します。
+
+"""
+
 # Standard Library
 import logging
 
 
 def configure_logging() -> logging.Logger:
+    """
+    ### 概要:
+
+        このモジュールには、アプリケーションのロギング設定が含まれています。
+
+    ### 使用例:
+
+        >>> from modules import logging_config
+
+        >>> logger = logging_config.configure_logging()
+        >>> logger.info("info message")
+        >>> logger.debug("debug message")
+        >>> logger.warning("warning message")
+        >>> logger.error("error message")
+    """
     # ロガーを作成する
     logger = logging.getLogger(__name__)
 
