@@ -37,7 +37,6 @@ Visual Studio Codeの設定は、以下のように行ってください。
 ```sh
 mkdir .vscode
 touch .vscode/settings.json
-vi .vscode/settings.json
 ```
 下記を記述
 ```json
